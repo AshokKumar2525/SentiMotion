@@ -8,12 +8,6 @@ It predicts one of six emotions:
 
 ---
 
-## 🌟 Demo
-![demo-screenshot](docs/demo.png)  
-(Type a tweet → Click **Analyze** → See predicted emotion with confidence bars.)
-
----
-
 ## 🧩 Features
 - **6-class emotion detection** powered by a fine-tuned BERT model
 - Beautiful **gradient UI** with animated background
