@@ -1,6 +1,6 @@
-# ✨ EmotiVerse – BERT Twitter Sentiment/Emotion Analyzer
+# ✨ SentiMotion – BERT Twitter Sentiment/Emotion Analyzer
 
-EmotiVerse is an interactive **Streamlit web app** that analyzes the emotional tone of tweets
+SentiMotion is an interactive **Streamlit web app** that analyzes the emotional tone of tweets
 using a **fine-tuned BERT (bert-base-uncased)** model.  
 It predicts one of six emotions:
 
@@ -26,7 +26,7 @@ It predicts one of six emotions:
 ```
 ├── app.py # Streamlit app
 ├── requirements.txt # Python dependencies
-├── bert-base-uncased-sentiment-model/
+├── bert-base-uncased-sentiment-model/ # ↓ Place the downloaded model folder here ↓
 │ ├── config.json
 │ ├── model.safetensors
 │ ├── vocab.txt
@@ -44,6 +44,15 @@ It predicts one of six emotions:
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
 ```
+### 2️⃣ Train / Download the Model
+This repo does not include the BERT model weights (too large for GitHub).
+Instead:
+1. Open the provided Google Colab notebook (`twitter_multi_class_sentiment.ipynb`).
+2. Run all cells to fine-tune or download the `bert-base-uncased-sentiment-model`.
+3. After training finishes, download the entire `bert-base-uncased-sentiment-model` folder from Colab.
+4. Place that folder inside this repository root (same level as `app.py`).
+    - 💡 Make sure the folder name stays exactly `bert-base-uncased-sentiment-model`.
+
 ### 2️⃣ Create & Activate Virtual Environment (recommended)
 ```bash
 python3 -m venv venv
@@ -63,7 +72,7 @@ streamlit run app.py
 
 ## 💡 Model Details
 
-- Base model: bert-base-uncased
+- Base model: `bert-base-uncased`
 - Classes (id → label):
 ```
 0 → Sadness
